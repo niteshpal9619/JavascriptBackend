@@ -8,13 +8,18 @@ app.get('/',(req,res)=>{
     res.send('Hello World!')
 })
 
-let User={
-    Name:"Ram",
-    Gender:"Male"
-}
+let GithubData={
+    "name": "dummy-repo",
+    "description": "This is a dummy repository for testing purposes.",
+    "private": false,
+    "auto_init": true,
+    "gitignore_template": "Node",
+    "license_template": "mit"
+  }
 
 app.get('/Login',(req,res)=>{
-    res.send(User)
+    //res.send(GithubData)
+    res.json(GithubData)
 })
 
 app.get('/Register',(req,res)=>{
